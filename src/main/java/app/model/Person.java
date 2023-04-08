@@ -21,7 +21,8 @@ import java.util.List;
         {@NamedQuery(name = "findPersonByName", query = "from Person pers where pers.name = :name"),
                 @NamedQuery(name = "findPersonByEmailAndPassword", query = "from Person pers where pers.email = :email and pers.password=:password"),
                 @NamedQuery(name = "findPersonById", query = "from Person pers where pers.id = :id"),
-                @NamedQuery(name = "findAllPersons", query = "from Person")
+                @NamedQuery(name = "findAllPersons", query = "from Person"),
+                @NamedQuery(name = "findPersonByEmail", query = "from Person pers where pers.email = :email")
         }
 )
 public class Person implements Serializable {
@@ -41,8 +42,8 @@ public class Person implements Serializable {
     @Column
     private String email;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    private Address address;
+    @Column
+    private Integer noOfQuest;
 
     @OneToMany(fetch = FetchType.EAGER)
     private List<Badge> badges;

@@ -21,7 +21,7 @@
         <!-- Map Java Class to DB Entity-->
         <mapping class="app.model.Person"/>
         <mapping class="app.model.Badge"/>
-        <mapping class="app.model.Address"/>
+        <mapping class="app.model.Quest"/>
 
     </session-factory>
 </hibernate-configuration>

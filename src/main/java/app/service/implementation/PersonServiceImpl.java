@@ -13,7 +13,7 @@ import java.util.List;
 public class PersonServiceImpl implements PersonService {
 
     private PersonRepository personRepository = RepositorySinglePointAccess.getPersonRepository();
-    private BadgeRepository badgeRepository= RepositorySinglePointAccess.getCarRepository();
+    private BadgeRepository badgeRepository= RepositorySinglePointAccess.getBadgeRepository();
 
     @Override
     public Person save(Person person) {
@@ -59,5 +59,15 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public Person login(String name, String password) {
         return personRepository.findByEmailAndPassword(name, password);
+    }
+
+    @Override
+    public Person register(String name, String password, String email) {
+        return personRepository.register(name, password, email);
+    }
+
+    @Override
+    public Person findByEmail(String email) {
+        return personRepository.findByEmail(email);
     }
 }

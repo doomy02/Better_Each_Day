@@ -3,9 +3,12 @@ package app.repository.implemetation;
 import app.configuration.HibernateConfiguration;
 import app.model.Person;
 import app.repository.PersonRepository;
+import app.service.PersonService;
+import app.single_point_access.ServiceSinglePointAccess;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
@@ -28,8 +31,6 @@ public class PersonRepositoryImpl implements PersonRepository {
 
     @Override
     public Person update(Person entity) {
-        // TO DO
-        // Same logic - extract it somehow
         SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
@@ -49,9 +50,6 @@ public class PersonRepositoryImpl implements PersonRepository {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        // Native SQL - not preferred
-        // Query query = session.createSQLQuery("select * from person");
-
         TypedQuery<Person> query = session.getNamedQuery("findAllPersons");
         List<Person> persons = query.getResultList();
 
@@ -66,10 +64,6 @@ public class PersonRepositoryImpl implements PersonRepository {
         SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-
-        // HQL - Hibernate Query Language, but use named query instead to reuse them
-        // Query query = session.createQuery("from Person where id=:id");
-        // query.setParameter("id", id);
 
         TypedQuery<Person> query = session.getNamedQuery("findPersonById");
         query.setParameter("id", id);
@@ -109,7 +103,6 @@ public class PersonRepositoryImpl implements PersonRepository {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        // Used a Named Query - best solution
         TypedQuery<Person> query = session.getNamedQuery("findPersonByName");
         query.setParameter("name", name);
         Person person;
@@ -132,11 +125,31 @@ public class PersonRepositoryImpl implements PersonRepository {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        // TO DO
-        // Same logic - extract it somehow
-        TypedQuery<Person> query = session.getNamedQuery("findPersonByEmailAndPassword");
+        Query query = session.getNamedQuery("findPersonByEmailAndPassword");
         query.setParameter("email", email);
         query.setParameter("password", password);
+
+        Person person;
+        try {
+            person = (Person) query.getSingleResult();
+        } catch (NoResultException e) {
+            person = null;
+        }
+
+        transaction.commit();
+        session.close();
+
+        return person;
+    }
+
+    @Override
+    public Person findByEmail(String email) {
+        SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        TypedQuery<Person> query = session.getNamedQuery("findPersonByEmail");
+        query.setParameter("email", email);
 
         Person person;
         try {
@@ -149,5 +162,26 @@ public class PersonRepositoryImpl implements PersonRepository {
         session.close();
 
         return person;
+    }
+
+    @Override
+    public Person register(String name, String password, String email)
+    {
+        SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        Person user = new Person();
+        user.setName(name);
+        user.setPassword(password);
+        user.setEmail(email);
+
+        PersonService personService = ServiceSinglePointAccess.getPersonService();
+        Person savedPerson = personService.save(user);
+
+        transaction.commit();
+        session.close();
+
+        return savedPerson;
     }
 }

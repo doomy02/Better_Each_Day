@@ -33,5 +33,13 @@ public class LoginController {
                 }
             }
         });
+
+        loginView.getSignUpButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RegisterController registerController = new RegisterController();
+                registerController.startLogic();
+            }
+        });
     }
 }

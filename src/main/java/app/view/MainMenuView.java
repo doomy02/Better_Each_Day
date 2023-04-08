@@ -1,7 +1,6 @@
 package app.view;
 
 import lombok.Getter;
-import org.hibernate.annotations.GeneratorType;
 
 import javax.swing.*;
 
@@ -26,4 +25,8 @@ public class MainMenuView {
     private JLabel emailValue;
     @Getter
     private JLabel tokensValue;
+    @Getter
+    private JButton claimButton;
+    @Getter
+    private JButton questButton;
 }

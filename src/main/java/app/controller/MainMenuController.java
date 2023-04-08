@@ -1,7 +1,9 @@
 package app.controller;
 
 import app.model.Person;
+import app.service.PersonService;
 import app.single_point_access.GUIFrameSinglePointAccess;
+import app.single_point_access.ServiceSinglePointAccess;
 import app.view.MainMenuView;
 
 import java.awt.event.ActionEvent;
@@ -9,6 +11,7 @@ import java.awt.event.ActionListener;
 
 public class MainMenuController {
     private MainMenuView mainMenuView;
+    private PersonService personService = ServiceSinglePointAccess.getPersonService();
 
     public void startLogic(Person person){
         mainMenuView = new MainMenuView();
@@ -24,6 +27,27 @@ public class MainMenuController {
             public void actionPerformed(ActionEvent e) {
                 LoginController loginController = new LoginController();
                 loginController.startLogic();
+            }
+        });
+
+        mainMenuView.getClaimButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                person.setTokens(person.getTokens() + 50);
+                Person savedPerson = personService.update(person);
+
+                mainMenuView.getTokensValue().setText(String.valueOf(person.getTokens()));
+
+                GUIFrameSinglePointAccess.showDialogMessage("Daily reward claimed!");
+                mainMenuView.getClaimButton().setVisible(false);
+            }
+        });
+
+        mainMenuView.getQuestButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                QuestController questController = new QuestController();
+                questController.startLogic(person);
             }
         });
     }

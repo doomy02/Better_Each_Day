@@ -20,4 +20,8 @@ public interface PersonService {
     void addBadge(Person person, Badge badge);
 
     Person login(String name, String password);
+
+    Person register(String name, String password, String email);
+
+    Person findByEmail(String email);
 }
