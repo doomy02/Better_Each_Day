@@ -8,7 +8,7 @@ public class GUIFrameSinglePointAccess {
 
     private static JFrame initFrame() {
         JFrame frame = new JFrame();
-        frame.setSize(500, 500);
+        frame.setSize(640, 480);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -16,6 +16,13 @@ public class GUIFrameSinglePointAccess {
     }
 
     public static void changePanel(JPanel panel, String frameTitle) {
+        appFrame.setContentPane(panel);
+        appFrame.setTitle(frameTitle);
+        appFrame.getContentPane().revalidate();
+        appFrame.getContentPane().repaint();
+    }
+
+    public static void changeJPanel(JTabbedPane panel, String frameTitle){
         appFrame.setContentPane(panel);
         appFrame.setTitle(frameTitle);
         appFrame.getContentPane().revalidate();

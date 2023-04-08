@@ -6,5 +6,5 @@ public interface PersonRepository extends CRUDRepository<Person, Integer> {
 
     Person findByName(String name);
 
-    Person findByNameAndPassword(String name, String password);
+    Person findByEmailAndPassword(String email, String password);
 }

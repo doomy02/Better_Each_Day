@@ -19,13 +19,12 @@ import java.util.List;
 @AllArgsConstructor
 @NamedQueries(
         {@NamedQuery(name = "findPersonByName", query = "from Person pers where pers.name = :name"),
-                @NamedQuery(name = "findPersonByNameAndPassword", query = "from Person pers where pers.name = :name and pers.password=:password"),
+                @NamedQuery(name = "findPersonByEmailAndPassword", query = "from Person pers where pers.email = :email and pers.password=:password"),
                 @NamedQuery(name = "findPersonById", query = "from Person pers where pers.id = :id"),
                 @NamedQuery(name = "findAllPersons", query = "from Person")
         }
 )
 public class Person implements Serializable {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -37,13 +36,16 @@ public class Person implements Serializable {
     private String password;
 
     @Column
-    private Integer salary;
+    private Integer tokens;
+
+    @Column
+    private String email;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
 
     @OneToMany(fetch = FetchType.EAGER)
-    private List<Car> cars;
+    private List<Badge> badges;
 
 
 }

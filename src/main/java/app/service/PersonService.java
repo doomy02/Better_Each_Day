@@ -1,6 +1,6 @@
 package app.service;
 
-import app.model.Car;
+import app.model.Badge;
 import app.model.Person;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public interface PersonService {
 
     boolean delete(Person person);
 
-    void addCar(Person person, Car car);
+    void addBadge(Person person, Badge badge);
 
     Person login(String name, String password);
 }

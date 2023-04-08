@@ -1,19 +1,19 @@
 package app.repository.implemetation;
 
 import app.configuration.HibernateConfiguration;
-import app.model.Car;
+import app.model.Badge;
+import app.repository.BadgeRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import app.repository.CarRepository;
+import org.hibernate.Transaction;;
 
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-public class CarRepositoryImpl implements CarRepository {
+public class BadgeRepositoryImpl implements BadgeRepository {
     @Override
-    public Car save(Car entity) {
+    public Badge save(Badge entity) {
         SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
@@ -27,41 +27,41 @@ public class CarRepositoryImpl implements CarRepository {
     }
 
     @Override
-    public Car update(Car entity) {
+    public Badge update(Badge entity) {
         // TO DO
         return null;
     }
 
     @Override
-    public Car findById(Integer id) {
+    public Badge findById(Integer id) {
         SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        TypedQuery<Car> query = session.getNamedQuery("findCarById");
+        TypedQuery<Badge> query = session.getNamedQuery("findCarById");
         query.setParameter("id", id);
 
-        Car car;
+        Badge badge;
         try {
-            car = query.getSingleResult();
+            badge = query.getSingleResult();
         } catch (NoResultException e) {
-            car = null;
+            badge = null;
         }
 
         transaction.commit();
         session.close();
 
-        return car;
+        return badge;
     }
 
     @Override
-    public List<Car> findAll() {
+    public List<Badge> findAll() {
         // TO DO
         return null;
     }
 
     @Override
-    public boolean delete(Car entity) {
+    public boolean delete(Badge entity) {
         // TO DO
         return false;
     }

@@ -127,15 +127,15 @@ public class PersonRepositoryImpl implements PersonRepository {
     }
 
     @Override
-    public Person findByNameAndPassword(String name, String password) {
+    public Person findByEmailAndPassword(String email, String password) {
         SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
         // TO DO
         // Same logic - extract it somehow
-        TypedQuery<Person> query = session.getNamedQuery("findPersonByNameAndPassword");
-        query.setParameter("name", name);
+        TypedQuery<Person> query = session.getNamedQuery("findPersonByEmailAndPassword");
+        query.setParameter("email", email);
         query.setParameter("password", password);
 
         Person person;

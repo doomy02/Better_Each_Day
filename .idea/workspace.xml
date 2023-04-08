@@ -5,16 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95052255-4360-4d16-bf9c-087fc9b1c5f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/repository/BadgeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/view/LoginView.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/view/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c307fe66-8050-48f0-8e1c-5c9d4b52cfcc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c307fe66-8050-48f0-8e1c-5c9d4b52cfcc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e84c1674-49ff-4bae-afe7-f96b23e8b38e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e84c1674-49ff-4bae-afe7-f96b23e8b38e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Badge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/CarRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/PersonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/CarRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/BadgeRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/PersonRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/PersonRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/implementation/PeronServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/implementation/PersonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/single_point_access/GUIFrameSinglePointAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/single_point_access/GUIFrameSinglePointAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/single_point_access/RepositorySinglePointAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/single_point_access/RepositorySinglePointAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/single_point_access/ServiceSinglePointAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/single_point_access/ServiceSinglePointAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/model/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/model/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/repository/CarRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/repository/PersonRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/repository/PersonRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/repository/implemetation/CarRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/repository/implemetation/PersonRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/repository/implemetation/PersonRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/service/PersonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/service/implementation/PeronServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/single_point_access/RepositorySinglePointAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/single_point_access/RepositorySinglePointAccess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/single_point_access/ServiceSinglePointAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/single_point_access/ServiceSinglePointAccess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +44,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,6 +65,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2O6yGEKwu4ZPQ5qhRiSAHpgkv65" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -89,6 +113,8 @@
       <workItem from="1680899473933" duration="39000" />
       <workItem from="1680899553642" duration="74000" />
       <workItem from="1680899672221" duration="130000" />
+      <workItem from="1680899941829" duration="122000" />
+      <workItem from="1680933024173" duration="8980000" />
     </task>
     <servers />
   </component>

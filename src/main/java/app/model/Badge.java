@@ -16,16 +16,13 @@ import java.io.Serializable;
 @Table
 @Data
 @NamedQueries(
-        {@NamedQuery(name = "findCarById", query = "from Car car where car.id = :id")}
+        {@NamedQuery(name = "findBadgeById", query = "from Badge badge where badge.id = :id")}
 )
-public class Car implements Serializable {
+public class Badge implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column
     private String name;
-
-    @Column
-    private Double price;
 }

@@ -1,8 +1,8 @@
 package app.service.implementation;
 
-import app.model.Car;
+import app.model.Badge;
 import app.model.Person;
-import app.repository.CarRepository;
+import app.repository.BadgeRepository;
 import app.repository.PersonRepository;
 import app.service.PersonService;
 import app.single_point_access.RepositorySinglePointAccess;
@@ -10,10 +10,10 @@ import app.single_point_access.RepositorySinglePointAccess;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PeronServiceImpl implements PersonService {
+public class PersonServiceImpl implements PersonService {
 
     private PersonRepository personRepository = RepositorySinglePointAccess.getPersonRepository();
-    private CarRepository carRepository = RepositorySinglePointAccess.getCarRepository();
+    private BadgeRepository badgeRepository= RepositorySinglePointAccess.getCarRepository();
 
     @Override
     public Person save(Person person) {
@@ -41,16 +41,16 @@ public class PeronServiceImpl implements PersonService {
     }
 
     @Override
-    public void addCar(Person person, Car car) {
-        if (person.getCars() == null) {
-            person.setCars(new ArrayList<>());
+    public void addBadge(Person person, Badge badge) {
+        if (person.getBadges() == null) {
+            person.setBadges(new ArrayList<>());
         }
 
-        if (car.getId() == null || carRepository.findById(car.getId()) == null) {
-            car = carRepository.save(car);
+        if (badge.getId() == null || badgeRepository.findById(badge.getId()) == null) {
+            badge = badgeRepository.save(badge);
         }
 
-        person.getCars().add(car);
+        person.getBadges().add(badge);
 
         personRepository.update(person);
 
@@ -58,6 +58,6 @@ public class PeronServiceImpl implements PersonService {
 
     @Override
     public Person login(String name, String password) {
-        return personRepository.findByNameAndPassword(name, password);
+        return personRepository.findByEmailAndPassword(name, password);
     }
 }
