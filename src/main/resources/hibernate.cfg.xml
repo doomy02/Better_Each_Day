@@ -22,6 +22,7 @@
         <mapping class="app.model.Person"/>
         <mapping class="app.model.Badge"/>
         <mapping class="app.model.Quest"/>
+        <mapping class="app.model.Journey"/>
 
     </session-factory>
 </hibernate-configuration>

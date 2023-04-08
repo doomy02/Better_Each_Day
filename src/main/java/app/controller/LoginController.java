@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 
 public class LoginController {
     private LoginView loginView;
-    private PersonService personService = ServiceSinglePointAccess.getPersonService();
+    private final PersonService personService = ServiceSinglePointAccess.getPersonService();
 
     public void startLogic(){
         loginView = new LoginView();

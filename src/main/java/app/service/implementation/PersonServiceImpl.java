@@ -12,8 +12,8 @@ import java.util.List;
 
 public class PersonServiceImpl implements PersonService {
 
-    private PersonRepository personRepository = RepositorySinglePointAccess.getPersonRepository();
-    private BadgeRepository badgeRepository= RepositorySinglePointAccess.getBadgeRepository();
+    private final PersonRepository personRepository = RepositorySinglePointAccess.getPersonRepository();
+    private final BadgeRepository badgeRepository= RepositorySinglePointAccess.getBadgeRepository();
 
     @Override
     public Person save(Person person) {

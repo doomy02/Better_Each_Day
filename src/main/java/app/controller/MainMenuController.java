@@ -1,6 +1,8 @@
 package app.controller;
 
+import app.model.Journey;
 import app.model.Person;
+import app.service.JourneyService;
 import app.service.PersonService;
 import app.single_point_access.GUIFrameSinglePointAccess;
 import app.single_point_access.ServiceSinglePointAccess;
@@ -11,7 +13,7 @@ import java.awt.event.ActionListener;
 
 public class MainMenuController {
     private MainMenuView mainMenuView;
-    private PersonService personService = ServiceSinglePointAccess.getPersonService();
+    private final PersonService personService = ServiceSinglePointAccess.getPersonService();
 
     public void startLogic(Person person){
         mainMenuView = new MainMenuView();
@@ -46,8 +48,11 @@ public class MainMenuController {
         mainMenuView.getQuestButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                JourneyService journeyService = ServiceSinglePointAccess.getJourneyService();
+                Journey journey = journeyService.findById(1);
+
                 QuestController questController = new QuestController();
-                questController.startLogic(person);
+                questController.startLogic(person, journey);
             }
         });
     }

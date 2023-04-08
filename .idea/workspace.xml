@@ -4,31 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95052255-4360-4d16-bf9c-087fc9b1c5f4" name="Changes" comment="login and main menu GUI + changes">
+    <list default="true" id="95052255-4360-4d16-bf9c-087fc9b1c5f4" name="Changes" comment="progress on the GUI and overall implementation">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e84c1674-49ff-4bae-afe7-f96b23e8b38e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e84c1674-49ff-4bae-afe7-f96b23e8b38e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Address.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/PersonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/QuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/QuestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Quest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/QuestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/QuestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/BadgeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/BadgeRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/PersonRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/PersonRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/QuestRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/QuestRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/QuestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/QuestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/implementation/BadgeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/implementation/BadgeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/service/implementation/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/implementation/PersonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/implementation/QuestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/implementation/QuestServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/single_point_access/GUIFrameSinglePointAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/single_point_access/GUIFrameSinglePointAccess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/single_point_access/RepositorySinglePointAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/single_point_access/RepositorySinglePointAccess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/single_point_access/ServiceSinglePointAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/single_point_access/ServiceSinglePointAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/view/LoginView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/view/LoginView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/view/MainMenuView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/view/MainMenuView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/view/MainMenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/view/MainMenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/view/QuestView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/view/QuestView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/view/QuestView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/view/QuestView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/model/Address.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/model/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/repository/PersonRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/repository/PersonRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/repository/implemetation/PersonRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/repository/implemetation/PersonRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/service/PersonService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/service/implementation/PersonServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/service/implementation/PersonServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/single_point_access/GUIFrameSinglePointAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/single_point_access/GUIFrameSinglePointAccess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/model/Quest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/model/Quest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/single_point_access/RepositorySinglePointAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/single_point_access/RepositorySinglePointAccess.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/single_point_access/ServiceSinglePointAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/single_point_access/ServiceSinglePointAccess.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
@@ -69,27 +72,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sebas/OneDrive/Desktop/mysql-connector-j-8.0.32.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;46f86faa6bbf9ac94a7e459509a20ed0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/sebas/OneDrive/Desktop/mysql-connector-j-8.0.32.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "spring.configuration.checksum": "46f86faa6bbf9ac94a7e459509a20ed0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="app.model.sql" />
@@ -111,7 +115,7 @@
       <workItem from="1680899553642" duration="74000" />
       <workItem from="1680899672221" duration="130000" />
       <workItem from="1680899941829" duration="122000" />
-      <workItem from="1680933024173" duration="21996000" />
+      <workItem from="1680933024173" duration="32538000" />
     </task>
     <task id="LOCAL-00001" summary="login and main menu GUI + changes">
       <created>1680944000389</created>
@@ -120,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680944000389</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="progress on the GUI and overall implementation">
+      <created>1680964274686</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680964274686</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +150,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="login and main menu GUI + changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="login and main menu GUI + changes" />
+    <MESSAGE value="progress on the GUI and overall implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="progress on the GUI and overall implementation" />
   </component>
 </project>

@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class GUIFrameSinglePointAccess {
 
-    private static JFrame appFrame = initFrame();
+    private static final JFrame appFrame = initFrame();
 
     private static JFrame initFrame() {
         JFrame frame = new JFrame();

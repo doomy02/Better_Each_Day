@@ -10,11 +10,9 @@ import java.util.List;
 
 public class QuestServiceImpl implements QuestService {
 
-    private QuestRepository questRepository = RepositorySinglePointAccess.getQuestRepository();
+    private final QuestRepository questRepository = RepositorySinglePointAccess.getQuestRepository();
     @Override
-    public Quest save(Quest quest) {
-        return questRepository.save(quest);
-    }
+    public Quest save(Quest quest) {return questRepository.save(quest);}
 
     @Override
     public Quest update(Quest quest) {
@@ -29,6 +27,11 @@ public class QuestServiceImpl implements QuestService {
     @Override
     public Quest findById(Integer id) {
         return questRepository.findById(id);
+    }
+
+    @Override
+    public Quest findByName(String name) {
+        return questRepository.findByName(name);
     }
 
     @Override

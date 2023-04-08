@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 public class RegisterController {
     private RegisterView registerView;
-    private PersonService personService = ServiceSinglePointAccess.getPersonService();
+    private final PersonService personService = ServiceSinglePointAccess.getPersonService();
 
     public void startLogic(){
         registerView = new RegisterView();

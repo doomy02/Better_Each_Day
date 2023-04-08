@@ -8,7 +8,7 @@ import app.single_point_access.RepositorySinglePointAccess;
 import java.util.List;
 
 public class BadgeServiceImpl implements BadgeService {
-    private BadgeRepository badgeRepository = RepositorySinglePointAccess.getBadgeRepository();
+    private final BadgeRepository badgeRepository = RepositorySinglePointAccess.getBadgeRepository();
     @Override
     public Badge save(Badge badge) {
         return badgeRepository.save(badge);

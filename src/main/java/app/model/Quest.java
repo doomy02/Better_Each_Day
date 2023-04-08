@@ -9,7 +9,6 @@ import org.hibernate.annotations.NamedQuery;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 @Table
@@ -21,6 +20,7 @@ import java.util.List;
             {@NamedQuery(name = "findQuestByName", query = "from Quest q where q.name = :name"),
                 @NamedQuery(name = "findQuestById", query = "from Quest q where q.id = :id"),
                 @NamedQuery(name = "findAllQuests", query = "from Quest"),
+                    @NamedQuery(name = "findByName", query = "from Quest q where q.name = :name")
         }
 )
 
@@ -28,7 +28,6 @@ public class Quest implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     @Column
     private String name;
 
@@ -43,5 +42,8 @@ public class Quest implements Serializable {
 
     @OneToOne
     private Person owner;
+
+    @Column
+    private String category;
 
 }

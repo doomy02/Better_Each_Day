@@ -1,34 +1,34 @@
 package app.repository.implemetation;
 
 import app.configuration.HibernateConfiguration;
-import app.model.Quest;
-import app.repository.QuestRepository;
+import app.model.Journey;
+import app.repository.JourneyRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-public class QuestRepositoryImpl implements QuestRepository {
-
+public class JourneyRepositoryImpl implements JourneyRepository {
     @Override
-    public Quest save(Quest entity) {
+    public Journey save(Journey entity) {
         SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        Integer idOnQuestSaved = (Integer) session.save(entity);
+        Integer idOnJourneySaved = (Integer) session.save(entity);
 
         transaction.commit();
         session.close();
 
-        return findById(idOnQuestSaved);
+        return findById(idOnJourneySaved);
     }
 
     @Override
-    public Quest update(Quest entity) {
+    public Journey update(Journey entity) {
         SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
@@ -43,44 +43,44 @@ public class QuestRepositoryImpl implements QuestRepository {
     }
 
     @Override
-    public Quest findById(Integer id) {
+    public Journey findById(Integer id) {
         SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        TypedQuery<Quest> query = session.getNamedQuery("findQuestById");
+        TypedQuery<Journey> query = session.getNamedQuery("findJourneyById");
         query.setParameter("id", id);
 
-        Quest q;
+        Journey j;
         try {
-            q = query.getSingleResult();
+            j = query.getSingleResult();
         } catch (NoResultException e) {
-            q = null;
+            j = null;
         }
 
         transaction.commit();
         session.close();
 
-        return q;
+        return j;
     }
 
     @Override
-    public List<Quest> findAll() {
+    public List<Journey> findAll() {
         SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        TypedQuery<Quest> query = session.getNamedQuery("findAllQuests");
-        List<Quest> q = query.getResultList();
+        TypedQuery<Journey> query = session.getNamedQuery("findAllJourneys");
+        List<Journey> j = query.getResultList();
 
         transaction.commit();
         session.close();
 
-        return q;
+        return j;
     }
 
     @Override
-    public boolean delete(Quest entity) {
+    public boolean delete(Journey entity) {
         SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
@@ -92,27 +92,5 @@ public class QuestRepositoryImpl implements QuestRepository {
         session.close();
 
         return findById(id) == null;
-    }
-
-    @Override
-    public Quest findByName(String name) {
-        SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-
-        TypedQuery<Quest> query = session.getNamedQuery("findQuestByName");
-        query.setParameter("name", name);
-
-        Quest q;
-        try {
-            q = query.getSingleResult();
-        } catch (NoResultException e) {
-            q = null;
-        }
-
-        transaction.commit();
-        session.close();
-
-        return q;
     }
 }

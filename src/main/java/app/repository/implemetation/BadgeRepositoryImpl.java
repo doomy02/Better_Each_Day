@@ -5,7 +5,7 @@ import app.model.Badge;
 import app.repository.BadgeRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;;
+import org.hibernate.Transaction;
 
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
@@ -28,7 +28,7 @@ public class BadgeRepositoryImpl implements BadgeRepository {
 
     @Override
     public Badge update(Badge entity) {
-        // TO DO
+
         return null;
     }
 
@@ -56,13 +56,13 @@ public class BadgeRepositoryImpl implements BadgeRepository {
 
     @Override
     public List<Badge> findAll() {
-        // TO DO
+
         return null;
     }
 
     @Override
     public boolean delete(Badge entity) {
-        // TO DO
+
         return false;
     }
 }

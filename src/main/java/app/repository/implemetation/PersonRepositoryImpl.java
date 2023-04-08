@@ -70,7 +70,7 @@ public class PersonRepositoryImpl implements PersonRepository {
 
         Person person;
         try {
-            person = (Person) query.getSingleResult();
+            person = query.getSingleResult();
         } catch (NoResultException e) {
             person = null;
         }

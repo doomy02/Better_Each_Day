@@ -22,4 +22,23 @@ public class QuestView {
     private JButton submitButton;
     @Getter
     private JButton backButton;
+    @Getter
+    private JComboBox comboBox1;
+    private JLabel answerNameLabel;
+    @Getter
+    private JTextField answerTextField;
+    private JLabel answerLabel;
+    @Getter
+    private JLabel answerNameValue;
+    @Getter
+    private JLabel tokensValue;
+    private JLabel answerDescriptionLabel;
+    @Getter
+    private JTextArea answerDescriptionField;
+    @Getter
+    private JButton submit2Button;
+    @Getter
+    private JButton back2Button;
+    @Getter
+    private JButton selectButton;
 }
