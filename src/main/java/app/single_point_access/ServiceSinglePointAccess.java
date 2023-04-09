@@ -2,14 +2,8 @@ package app.single_point_access;
 
 import app.repository.QuestRepository;
 import app.repository.implemetation.BadgeRepositoryImpl;
-import app.service.BadgeService;
-import app.service.JourneyService;
-import app.service.PersonService;
-import app.service.QuestService;
-import app.service.implementation.BadgeServiceImpl;
-import app.service.implementation.JourneyServiceImpl;
-import app.service.implementation.PersonServiceImpl;
-import app.service.implementation.QuestServiceImpl;
+import app.service.*;
+import app.service.implementation.*;
 
 public class ServiceSinglePointAccess {
 
@@ -17,12 +11,14 @@ public class ServiceSinglePointAccess {
     private static final BadgeService badgeService;
     private static final QuestService questService;
     private static final JourneyService journeyService;
+    private static final RankingService rankingService;
 
     static {
         personService = new PersonServiceImpl();
         questService = new QuestServiceImpl();
         badgeService = new BadgeServiceImpl();
         journeyService = new JourneyServiceImpl();
+        rankingService = new RankingServiceImpl();
     }
 
     public static PersonService getPersonService() {return personService;}
@@ -36,4 +32,5 @@ public class ServiceSinglePointAccess {
     }
 
     public static JourneyService getJourneyService(){return journeyService;}
+    public static RankingService getRankingService(){return rankingService;}
 }

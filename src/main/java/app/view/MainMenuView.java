@@ -29,4 +29,7 @@ public class MainMenuView {
     private JButton claimButton;
     @Getter
     private JButton questButton;
+    private JLabel solvedLabel;
+    @Getter
+    private JLabel solvedValue;
 }

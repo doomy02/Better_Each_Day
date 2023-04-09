@@ -20,7 +20,6 @@ import java.io.Serializable;
             {@NamedQuery(name = "findQuestByName", query = "from Quest q where q.name = :name"),
                 @NamedQuery(name = "findQuestById", query = "from Quest q where q.id = :id"),
                 @NamedQuery(name = "findAllQuests", query = "from Quest"),
-                    @NamedQuery(name = "findByName", query = "from Quest q where q.name = :name")
         }
 )
 

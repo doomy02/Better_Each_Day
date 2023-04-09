@@ -41,4 +41,6 @@ public class QuestView {
     private JButton back2Button;
     @Getter
     private JButton selectButton;
+    @Getter
+    private JComboBox rankBox;
 }

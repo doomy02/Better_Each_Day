@@ -42,8 +42,10 @@ public class Person implements Serializable {
     @Column
     private String email;
 
+    //private List<Role> role;
+
     @Column
-    private Integer noOfQuest;
+    private Integer noOfQuest = 0;
 
     @OneToMany(fetch = FetchType.EAGER)
     private List<Badge> badges;

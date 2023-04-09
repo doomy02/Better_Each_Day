@@ -1052,5 +1052,189 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
+    <table id="305" parent="288" name="badge">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="306" parent="288" name="journey">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="307" parent="288" name="journey_quest">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="308" parent="288" name="person">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="309" parent="288" name="person_badge">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="310" parent="288" name="quest">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="311" parent="305" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="312" parent="305" name="name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <index id="313" parent="305" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="314" parent="305" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="315" parent="306" name="id">
+      <AutoIncrement>2</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="316" parent="306" name="noQuests">
+      <DataType>int|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <index id="317" parent="306" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="318" parent="306" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="319" parent="307" name="Journey_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="320" parent="307" name="quests_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="321" parent="307" name="FK7ii48q3oni5hfpjm4bgg6bowd">
+      <ColNames>Journey_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="322" parent="307" name="FKqesbow1v8nyljgusdy33u4rx3">
+      <ColNames>quests_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <column id="323" parent="308" name="id">
+      <AutoIncrement>2</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="324" parent="308" name="email">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="325" parent="308" name="name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="326" parent="308" name="noOfQuest">
+      <DataType>int|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="327" parent="308" name="password">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="328" parent="308" name="tokens">
+      <DataType>int|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <index id="329" parent="308" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="330" parent="308" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="331" parent="309" name="Person_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="332" parent="309" name="badges_id">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <index id="333" parent="309" name="UK_4y8l2hsv8uy8wxupirnaxjuqn">
+      <ColNames>badges_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="334" parent="309" name="FKjkcobnexidwpv1m1hspsa3mec">
+      <ColNames>Person_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="335" parent="309" name="UK_4y8l2hsv8uy8wxupirnaxjuqn">
+      <UnderlyingIndexName>UK_4y8l2hsv8uy8wxupirnaxjuqn</UnderlyingIndexName>
+    </key>
+    <column id="336" parent="310" name="id">
+      <AutoIncrement>3</AutoIncrement>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="337" parent="310" name="availability">
+      <DataType>bit(1)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="338" parent="310" name="category">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="339" parent="310" name="description">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="340" parent="310" name="name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="341" parent="310" name="tokens">
+      <DataType>int|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="342" parent="310" name="owner_id">
+      <DataType>int|0s</DataType>
+      <Position>7</Position>
+    </column>
+    <index id="343" parent="310" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="344" parent="310" name="FKae9q26va20am74042n7vhq9vc">
+      <ColNames>owner_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="345" parent="310" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>

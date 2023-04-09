@@ -13,7 +13,7 @@ public interface QuestService {
 
     Quest findById(Integer id);
 
-    Quest findByName(String category);
+    Quest findByName(String name);
 
     boolean delete(Quest quest);
 }

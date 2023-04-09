@@ -27,7 +27,7 @@ public class JourneyServiceImpl implements JourneyService {
         if (j.getQuests() == null) {
             j.setQuests(new ArrayList<>());
         }
-        if (q.getCategory() == null || questRepository.findById(q.getId()) == null) {
+        if (q.getName() == null || questRepository.findById(q.getId()) == null) {
             q = questRepository.save(q);
         }
 
@@ -42,4 +42,7 @@ public class JourneyServiceImpl implements JourneyService {
     public Journey save(Journey j) {
         return journeyRepository.save(j);
     }
+
+    @Override
+    public Journey update(Journey j) {return journeyRepository.update(j);}
 }

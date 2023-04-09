@@ -2,8 +2,10 @@ package app.controller;
 
 import app.model.Journey;
 import app.model.Person;
+import app.model.Ranking;
 import app.service.JourneyService;
 import app.service.PersonService;
+import app.service.RankingService;
 import app.single_point_access.GUIFrameSinglePointAccess;
 import app.single_point_access.ServiceSinglePointAccess;
 import app.view.MainMenuView;
@@ -23,6 +25,7 @@ public class MainMenuController {
         mainMenuView.getNameValue().setText(person.getName());
         mainMenuView.getEmailValue().setText(person.getEmail());
         mainMenuView.getTokensValue().setText(String.valueOf(person.getTokens()));
+        mainMenuView.getSolvedValue().setText(String.valueOf(person.getNoOfQuest()));
 
         mainMenuView.getSignOutButton().addActionListener(new ActionListener() {
             @Override
@@ -51,8 +54,11 @@ public class MainMenuController {
                 JourneyService journeyService = ServiceSinglePointAccess.getJourneyService();
                 Journey journey = journeyService.findById(1);
 
+                RankingService rankingService = ServiceSinglePointAccess.getRankingService();
+                Ranking ranking = rankingService.findById(1);
+
                 QuestController questController = new QuestController();
-                questController.startLogic(person, journey);
+                questController. startLogic(person, journey, ranking);
             }
         });
     }

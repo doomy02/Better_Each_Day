@@ -23,6 +23,7 @@
         <mapping class="app.model.Badge"/>
         <mapping class="app.model.Quest"/>
         <mapping class="app.model.Journey"/>
+        <mapping class="app.model.Ranking"/>
 
     </session-factory>
 </hibernate-configuration>
