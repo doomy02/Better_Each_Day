@@ -8,6 +8,7 @@ import app.service.RankingService;
 import app.single_point_access.RepositorySinglePointAccess;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RankingServiceImpl implements RankingService {
     private final RankingRepository rankingRepository = RepositorySinglePointAccess.getRankingRepository();
@@ -37,4 +38,7 @@ public class RankingServiceImpl implements RankingService {
 
     @Override
     public Ranking update(Ranking r) {return rankingRepository.update(r);}
+
+    @Override
+    public Boolean delete(Ranking r) {return rankingRepository.delete(r);}
 }

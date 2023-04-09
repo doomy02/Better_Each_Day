@@ -1,6 +1,6 @@
 package app;
 
-import app.controller.LoginController;
+import app.controller.gui.LoginController;
 import app.model.Journey;
 import app.model.Person;
 import app.model.Quest;

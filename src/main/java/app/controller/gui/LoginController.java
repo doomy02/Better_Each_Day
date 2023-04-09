@@ -1,4 +1,4 @@
-package app.controller;
+package app.controller.gui;
 
 import app.model.Person;
 import app.service.PersonService;

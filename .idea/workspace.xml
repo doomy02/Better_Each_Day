@@ -4,25 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95052255-4360-4d16-bf9c-087fc9b1c5f4" name="Changes" comment="quest system 40% done + fix patch 1.0">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c307fe66-8050-48f0-8e1c-5c9d4b52cfcc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c307fe66-8050-48f0-8e1c-5c9d4b52cfcc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e84c1674-49ff-4bae-afe7-f96b23e8b38e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e84c1674-49ff-4bae-afe7-f96b23e8b38e.xml" afterDir="false" />
+    <list default="true" id="95052255-4360-4d16-bf9c-087fc9b1c5f4" name="Changes" comment="ranking system 1.0 + quest system 80% done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/QuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/QuestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Quest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/gui/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/gui/MainMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/QuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/gui/QuestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/gui/RegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/service/JourneyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/JourneyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/QuestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/QuestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/RankingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/RankingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/service/implementation/JourneyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/implementation/JourneyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/single_point_access/RepositorySinglePointAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/single_point_access/RepositorySinglePointAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/single_point_access/ServiceSinglePointAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/single_point_access/ServiceSinglePointAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/view/MainMenuView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/view/MainMenuView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/view/MainMenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/view/MainMenuView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/view/QuestView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/view/QuestView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/view/QuestView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/view/QuestView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/implementation/RankingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/implementation/RankingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/MainMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/QuestController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/QuestController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/QuestController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/QuestController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/QuestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/QuestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/model/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/model/Quest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/model/Quest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/service/QuestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/service/QuestService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/single_point_access/RepositorySinglePointAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/single_point_access/RepositorySinglePointAccess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/single_point_access/ServiceSinglePointAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/single_point_access/ServiceSinglePointAccess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/view/MainMenuView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/view/MainMenuView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/view/QuestView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/view/QuestView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +41,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -84,6 +93,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="app.controller.rest" />
       <recent name="app.model.sql" />
     </key>
   </component>
@@ -104,7 +114,10 @@
       <workItem from="1680899672221" duration="130000" />
       <workItem from="1680899941829" duration="122000" />
       <workItem from="1680933024173" duration="33301000" />
-      <workItem from="1681021651486" duration="15871000" />
+      <workItem from="1681021651486" duration="17957000" />
+      <workItem from="1681054913525" duration="640000" />
+      <workItem from="1681065246452" duration="644000" />
+      <workItem from="1681066647978" duration="4419000" />
     </task>
     <task id="LOCAL-00001" summary="login and main menu GUI + changes">
       <created>1680944000389</created>
@@ -127,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680980662610</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ranking system 1.0 + quest system 80% done">
+      <created>1681050469405</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681050469405</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +168,7 @@
     <MESSAGE value="login and main menu GUI + changes" />
     <MESSAGE value="progress on the GUI and overall implementation" />
     <MESSAGE value="quest system 40% done + fix patch 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="quest system 40% done + fix patch 1.0" />
+    <MESSAGE value="ranking system 1.0 + quest system 80% done" />
+    <option name="LAST_COMMIT_MESSAGE" value="ranking system 1.0 + quest system 80% done" />
   </component>
 </project>

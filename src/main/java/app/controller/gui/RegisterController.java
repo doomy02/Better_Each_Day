@@ -1,4 +1,4 @@
-package app.controller;
+package app.controller.gui;
 
 import app.model.Person;
 import app.service.PersonService;
@@ -8,7 +8,6 @@ import app.view.RegisterView;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
 
 public class RegisterController {
     private RegisterView registerView;

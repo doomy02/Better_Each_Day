@@ -45,4 +45,7 @@ public class JourneyServiceImpl implements JourneyService {
 
     @Override
     public Journey update(Journey j) {return journeyRepository.update(j);}
+
+    @Override
+    public Boolean delete(Journey j) {return journeyRepository.delete(j);}
 }

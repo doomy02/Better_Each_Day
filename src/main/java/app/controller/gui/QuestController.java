@@ -1,10 +1,9 @@
-package app.controller;
+package app.controller.gui;
 
 import app.model.Journey;
 import app.model.Person;
 import app.model.Quest;
 import app.model.Ranking;
-import app.repository.JourneyRepository;
 import app.service.JourneyService;
 import app.service.PersonService;
 import app.service.QuestService;

@@ -8,4 +8,5 @@ public interface JourneyService {
     void addQuestJourney(Journey j, Quest q);
     Journey save(Journey j);
     Journey update(Journey j);
+    Boolean delete(Journey j);
 }
