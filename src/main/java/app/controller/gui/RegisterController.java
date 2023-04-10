@@ -1,9 +1,11 @@
 package app.controller.gui;
 
+import app.exception.ValidationException;
 import app.model.Person;
 import app.service.PersonService;
 import app.single_point_access.GUIFrameSinglePointAccess;
 import app.single_point_access.ServiceSinglePointAccess;
+import app.validator.implementation.ValidateImpl;
 import app.view.RegisterView;
 
 import java.awt.event.ActionEvent;
@@ -31,18 +33,46 @@ public class RegisterController {
                 String email = registerView.getEmailField().getText();
                 String name = registerView.getNameField().getText();
                 String password = String.valueOf(registerView.getPasswordField1().getPassword());
-                boolean ok = true;
 
-                if(email.isEmpty() || name.isEmpty() || password.isEmpty()){
-                    GUIFrameSinglePointAccess.showDialogMessage("Please, fill each field!");
+                ValidateImpl validate = new ValidateImpl();
+                boolean validateEmail = validate.validateEmail(email);
+                boolean validatePassword = validate.validatePassword(password);
+                boolean validateName = validate.validateName(name);
 
-                    registerView.getNameField().setText("");
-                    registerView.getEmailField().setText("");
-                    registerView.getPasswordField1().setText("");
-
-                    ok = false;
+                if(!validateEmail){
+                    try {
+                        registerView.getNameField().setText("");
+                        registerView.getEmailField().setText("");
+                        registerView.getPasswordField1().setText("");
+                        GUIFrameSinglePointAccess.showDialogMessage("Wrong email format! Needs to be smth@gmail|proton|yahoo.com");
+                        throw new ValidationException("Wrong email format!");
+                    } catch (ValidationException ex) {
+                        throw new RuntimeException(ex);
+                    }
                 }
-                else if(ok){
+                else if(!validateName){
+                    try {
+                        registerView.getNameField().setText("");
+                        registerView.getEmailField().setText("");
+                        registerView.getPasswordField1().setText("");
+                        GUIFrameSinglePointAccess.showDialogMessage("Wrong name format! Needs to be your full name with no numbers!");
+                        throw new ValidationException("Wrong name format!");
+                    } catch (ValidationException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
+                else if(!validatePassword){
+                    try {
+                        registerView.getNameField().setText("");
+                        registerView.getEmailField().setText("");
+                        registerView.getPasswordField1().setText("");
+                        GUIFrameSinglePointAccess.showDialogMessage("Wrong name format! Needs to have at least 1 uppercase, 1 digit, no spaces and 6 characters!");
+                        throw new ValidationException("Wrong password format!");
+                    } catch (ValidationException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
+                else{
                     registerView.getNameField().setText("");
                     registerView.getEmailField().setText("");
                     registerView.getPasswordField1().setText("");

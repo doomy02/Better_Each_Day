@@ -1,5 +1,6 @@
 package app.controller.gui;
 
+import app.exception.ValidationException;
 import app.model.Journey;
 import app.model.Person;
 import app.model.Quest;
@@ -10,6 +11,7 @@ import app.service.QuestService;
 import app.service.RankingService;
 import app.single_point_access.GUIFrameSinglePointAccess;
 import app.single_point_access.ServiceSinglePointAccess;
+import app.validator.implementation.ValidateImpl;
 import app.view.QuestView;
 
 import java.awt.event.ActionEvent;
@@ -27,17 +29,19 @@ public class QuestController {
         questView = new QuestView();
         GUIFrameSinglePointAccess.changePanel(questView.getMainPanel(), "Better Each Day");
 
-        if(j.getNoQuests() != 0)
+        if(j.getNoQuests() >= 1)
         {
             for(int i = 0; i < j.getNoQuests(); i++){
                 if(j.getQuests().get(i).getAvailability()){
                     questView.getComboBox1().addItem(j.getQuests().get(i).getName());
                 }
                 else{
-                    questService.delete(j.getQuests().get(i));
                     journeyService.update(j);
                 }
             }
+        }
+        else{
+            questView.getComboBox1().addItem("No quests yet!");
         }
 
         r.getPersons().sort(Comparator.comparing(Person::getNoOfQuest).thenComparing(Person::getTokens).thenComparing(Person::getId).reversed());
@@ -60,6 +64,20 @@ public class QuestController {
                 String name = questView.getNameField().getText();
                 Integer tokens = Integer.valueOf(questView.getTokensField().getText());
                 String description = questView.getDescriptionField().getText();
+
+                ValidateImpl validate = new ValidateImpl();
+                boolean validateTokens = validate.validateTokens(String.valueOf(tokens));
+                if(!validateTokens){
+                    try {
+                        questView.getNameField().setText("");
+                        questView.getDescriptionField().setText("");
+                        questView.getTokensField().setText("");
+                        GUIFrameSinglePointAccess.showDialogMessage("Wrong amount of tokens! Needs to be a value of [100, 999]");
+                        throw new ValidationException("Wrong tokens format!");
+                    } catch (ValidationException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
 
                 if(person.getTokens() < tokens) {
                     GUIFrameSinglePointAccess.showDialogMessage("Insufficient tokens!");
@@ -118,13 +136,14 @@ public class QuestController {
         questView.getSubmit2Button().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                person.setNoOfQuest(person.getNoOfQuest() + 1);
-                Person user = personService.update(person);
-                rankingService.update(r);
-
                 String name = questView.getComboBox1().getSelectedItem().toString();
                 QuestService questService1 = ServiceSinglePointAccess.getQuestService();
                 Quest savedQuest = questService1.findByName(name);
+
+                person.setTokens(person.getTokens() + savedQuest.getTokens());
+                person.setNoOfQuest(person.getNoOfQuest() + 1);
+                Person user = personService.update(person);
+                rankingService.update(r);
 
                 savedQuest.setAvailability(false);
                 savedQuest = questService1.update(savedQuest);

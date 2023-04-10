@@ -1,8 +1,6 @@
 package app.repository.implemetation;
 
 import app.configuration.HibernateConfiguration;
-import app.model.Journey;
-import app.model.Person;
 import app.model.Ranking;
 import app.repository.RankingRepository;
 import org.hibernate.Session;
@@ -11,8 +9,6 @@ import org.hibernate.Transaction;
 
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class RankingRepositoryImpl implements RankingRepository {
