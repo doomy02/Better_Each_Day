@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95052255-4360-4d16-bf9c-087fc9b1c5f4" name="Changes" comment="base implementation for Postman">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c307fe66-8050-48f0-8e1c-5c9d4b52cfcc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c307fe66-8050-48f0-8e1c-5c9d4b52cfcc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e84c1674-49ff-4bae-afe7-f96b23e8b38e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e84c1674-49ff-4bae-afe7-f96b23e8b38e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/gui/QuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/gui/QuestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/gui/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/gui/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/RankingRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/RankingRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/validator/Validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/validator/Validate.java" afterDir="false" />
-    </list>
+    <list default="true" id="95052255-4360-4d16-bf9c-087fc9b1c5f4" name="Changes" comment="quest system 100% + ranking system 2.0 + data validation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +91,7 @@
       <workItem from="1681054913525" duration="640000" />
       <workItem from="1681065246452" duration="644000" />
       <workItem from="1681066647978" duration="5033000" />
-      <workItem from="1681100810879" duration="4502000" />
+      <workItem from="1681100810879" duration="4831000" />
     </task>
     <task id="LOCAL-00001" summary="login and main menu GUI + changes">
       <created>1680944000389</created>
@@ -144,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681074508047</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="quest system 100% + ranking system 2.0 + data validation">
+      <created>1681105636598</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681105636598</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +165,7 @@
     <MESSAGE value="quest system 40% done + fix patch 1.0" />
     <MESSAGE value="ranking system 1.0 + quest system 80% done" />
     <MESSAGE value="base implementation for Postman" />
-    <option name="LAST_COMMIT_MESSAGE" value="base implementation for Postman" />
+    <MESSAGE value="quest system 100% + ranking system 2.0 + data validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="quest system 100% + ranking system 2.0 + data validation" />
   </component>
 </project>
