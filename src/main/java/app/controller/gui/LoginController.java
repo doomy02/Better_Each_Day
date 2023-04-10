@@ -1,6 +1,7 @@
 package app.controller.gui;
 
 import app.model.Person;
+import app.model.Ranking;
 import app.service.PersonService;
 import app.single_point_access.GUIFrameSinglePointAccess;
 import app.single_point_access.ServiceSinglePointAccess;
@@ -13,7 +14,7 @@ public class LoginController {
     private LoginView loginView;
     private final PersonService personService = ServiceSinglePointAccess.getPersonService();
 
-    public void startLogic(){
+    public void startLogic(Ranking ranking){
         loginView = new LoginView();
         GUIFrameSinglePointAccess.changePanel(loginView.getMainPanel(), "Better Each Day");
 
@@ -26,7 +27,7 @@ public class LoginController {
                 Person person = personService.login(email, password);
                 if(person != null) {
                     MainMenuController menuController = new MainMenuController();
-                    menuController.startLogic(person);
+                    menuController.startLogic(person, ranking);
                 }
                 else{
                     GUIFrameSinglePointAccess.showDialogMessage("Invalid email or password!");
@@ -38,7 +39,7 @@ public class LoginController {
             @Override
             public void actionPerformed(ActionEvent e) {
                 RegisterController registerController = new RegisterController();
-                registerController.startLogic();
+                registerController.startLogic(ranking);
             }
         });
     }

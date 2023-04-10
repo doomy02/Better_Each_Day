@@ -32,4 +32,7 @@ public class MainMenuView {
     private JLabel solvedLabel;
     @Getter
     private JLabel solvedValue;
+    @Getter
+    private JComboBox badgesBox;
+    private JLabel badgesLabel;
 }

@@ -1085,7 +1085,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
     <column id="313" parent="305" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>4</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1143,7 +1143,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
     </index>
     <column id="325" parent="308" name="id">
-      <AutoIncrement>4</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1201,7 +1201,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>UK_4y8l2hsv8uy8wxupirnaxjuqn</UnderlyingIndexName>
     </key>
     <column id="338" parent="310" name="id">
-      <AutoIncrement>2</AutoIncrement>
+      <AutoIncrement>3</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1210,11 +1210,11 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DataType>bit(1)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="340" parent="310" name="category">
+    <column id="340" parent="310" name="firstPolynomial">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="341" parent="310" name="description">
+    <column id="341" parent="310" name="lastPolynomial">
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
@@ -1222,63 +1222,67 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="343" parent="310" name="tokens">
-      <DataType>int|0s</DataType>
+    <column id="343" parent="310" name="operation">
+      <DataType>varchar(255)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="344" parent="310" name="owner_id">
+    <column id="344" parent="310" name="tokens">
       <DataType>int|0s</DataType>
       <Position>7</Position>
     </column>
-    <index id="345" parent="310" name="PRIMARY">
+    <column id="345" parent="310" name="owner_id">
+      <DataType>int|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <index id="346" parent="310" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="346" parent="310" name="FKae9q26va20am74042n7vhq9vc">
+    <index id="347" parent="310" name="FKae9q26va20am74042n7vhq9vc">
       <ColNames>owner_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="347" parent="310" name="PRIMARY">
+    <key id="348" parent="310" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="348" parent="311" name="id">
+    <column id="349" parent="311" name="id">
       <AutoIncrement>2</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="349" parent="311" name="noOfPersons">
+    <column id="350" parent="311" name="noOfPersons">
       <DataType>int|0s</DataType>
       <Position>2</Position>
     </column>
-    <index id="350" parent="311" name="PRIMARY">
+    <index id="351" parent="311" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="351" parent="311" name="PRIMARY">
+    <key id="352" parent="311" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="352" parent="312" name="Ranking_id">
+    <column id="353" parent="312" name="Ranking_id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="353" parent="312" name="persons_id">
+    <column id="354" parent="312" name="persons_id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="354" parent="312" name="FKm5o5flc4xfhu1bred6pnxbj84">
+    <index id="355" parent="312" name="FKm5o5flc4xfhu1bred6pnxbj84">
       <ColNames>Ranking_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="355" parent="312" name="FKm1xa4q7t8p12d8o4h8xmuukm3">
+    <index id="356" parent="312" name="FKm1xa4q7t8p12d8o4h8xmuukm3">
       <ColNames>persons_id</ColNames>
       <Type>btree</Type>
     </index>

@@ -16,7 +16,8 @@ import java.io.Serializable;
 @Table
 @Data
 @NamedQueries(
-        {@NamedQuery(name = "findBadgeById", query = "from Badge badge where badge.id = :id")}
+        {@NamedQuery(name = "findBadgeById", query = "from Badge badge where badge.id = :id"),
+                @NamedQuery(name = "findAllBadges", query = "from Badge")}
 )
 public class Badge implements Serializable {
     @Id

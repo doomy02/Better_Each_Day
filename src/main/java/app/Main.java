@@ -7,6 +7,6 @@ public class Main {
         InnitApp innitApp = new InnitApp();
 
         LoginController loginController = new LoginController();
-        loginController.startLogic();
+        loginController.startLogic(innitApp.ranking);
     }
 }

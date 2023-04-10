@@ -2,7 +2,9 @@ package app.controller.gui;
 
 import app.exception.ValidationException;
 import app.model.Person;
+import app.model.Ranking;
 import app.service.PersonService;
+import app.service.RankingService;
 import app.single_point_access.GUIFrameSinglePointAccess;
 import app.single_point_access.ServiceSinglePointAccess;
 import app.validator.implementation.ValidateImpl;
@@ -14,8 +16,9 @@ import java.awt.event.ActionListener;
 public class RegisterController {
     private RegisterView registerView;
     private final PersonService personService = ServiceSinglePointAccess.getPersonService();
+    private final RankingService rankingService = ServiceSinglePointAccess.getRankingService();
 
-    public void startLogic(){
+    public void startLogic(Ranking r){
         registerView = new RegisterView();
         GUIFrameSinglePointAccess.changePanel(registerView.getMainPanel(), "Better Each Day");
 
@@ -23,7 +26,7 @@ public class RegisterController {
             @Override
             public void actionPerformed(ActionEvent e) {
                 LoginController loginController = new LoginController();
-                loginController.startLogic();
+                loginController.startLogic(r);
             }
         });
 
@@ -84,9 +87,13 @@ public class RegisterController {
                     else{
                         PersonService personService = ServiceSinglePointAccess.getPersonService();
                         Person savedPerson = personService.register(name, password, email);
+                        savedPerson.setTokens(100);
+                        savedPerson = personService.update(savedPerson);
+
+                        rankingService.addPersonRanking(r, savedPerson);
 
                         LoginController loginController = new LoginController();
-                        loginController.startLogic();
+                        loginController.startLogic(r);
                     }
                 }
             }

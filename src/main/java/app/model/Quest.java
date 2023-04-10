@@ -37,12 +37,15 @@ public class Quest implements Serializable {
     private Integer tokens;
 
     @Column
-    private String description;
+    private String firstPolynomial;
+
+    @Column
+    private String lastPolynomial;
 
     @OneToOne
     private Person owner;
 
     @Column
-    private String category;
+    private String operation;
 
 }

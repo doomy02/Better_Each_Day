@@ -1,4 +1,4 @@
-package model.polynomial;
+package app.model;
 
 import java.util.*;
 import java.util.regex.Matcher;

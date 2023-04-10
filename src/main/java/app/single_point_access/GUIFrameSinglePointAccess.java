@@ -1,6 +1,7 @@
 package app.single_point_access;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class GUIFrameSinglePointAccess {
 
@@ -12,6 +13,8 @@ public class GUIFrameSinglePointAccess {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Image icon = new ImageIcon(GUIFrameSinglePointAccess.class.getResource("/photos/study.png")).getImage();
+        frame.setIconImage(icon);
         return frame;
     }
 

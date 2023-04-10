@@ -2,6 +2,7 @@ package app.repository.implemetation;
 
 import app.configuration.HibernateConfiguration;
 import app.model.Badge;
+import app.model.Journey;
 import app.repository.BadgeRepository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -28,8 +29,17 @@ public class BadgeRepositoryImpl implements BadgeRepository {
 
     @Override
     public Badge update(Badge entity) {
+        SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
 
-        return null;
+        Integer id = entity.getId();
+        session.saveOrUpdate(entity);
+
+        transaction.commit();
+        session.close();
+
+        return findById(id);
     }
 
     @Override
@@ -38,7 +48,7 @@ public class BadgeRepositoryImpl implements BadgeRepository {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        TypedQuery<Badge> query = session.getNamedQuery("findCarById");
+        TypedQuery<Badge> query = session.getNamedQuery("findBadgeById");
         query.setParameter("id", id);
 
         Badge badge;
@@ -56,13 +66,31 @@ public class BadgeRepositoryImpl implements BadgeRepository {
 
     @Override
     public List<Badge> findAll() {
+        SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
 
-        return null;
+        TypedQuery<Badge> query = session.getNamedQuery("findAllBadges");
+        List<Badge> badge = query.getResultList();
+
+        transaction.commit();
+        session.close();
+
+        return badge;
     }
 
     @Override
     public boolean delete(Badge entity) {
+        SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
 
-        return false;
+        Integer id = entity.getId();
+        session.delete(entity);
+
+        transaction.commit();
+        session.close();
+
+        return findById(id) == null;
     }
 }

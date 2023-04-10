@@ -33,4 +33,6 @@ public class BadgeServiceImpl implements BadgeService {
     public boolean delete(Badge badge) {
         return badgeRepository.delete(badge);
     }
+
+
 }

@@ -13,11 +13,8 @@ public class QuestView {
     private JTextField nameField;
     @Getter
     private JTextField tokensField;
-    private JLabel descriptionLabel;
     private JLabel tokensLabel;
     private JLabel nameLabel;
-    @Getter
-    private JTextArea descriptionField;
     @Getter
     private JButton submitButton;
     @Getter
@@ -32,9 +29,6 @@ public class QuestView {
     private JLabel answerNameValue;
     @Getter
     private JLabel tokensValue;
-    private JLabel answerDescriptionLabel;
-    @Getter
-    private JTextArea answerDescriptionField;
     @Getter
     private JButton submit2Button;
     @Getter
@@ -43,4 +37,19 @@ public class QuestView {
     private JButton selectButton;
     @Getter
     private JComboBox rankBox;
+    private JLabel firstPolynomialLabel;
+    @Getter
+    private JTextField firstPolynomialField;
+    private JLabel secondPolynomialLabel;
+    @Getter
+    private JTextField secondPolynomialField;
+    @Getter
+    private JLabel firstPolynomialValue;
+    @Getter
+    private JLabel secondPolynomialValue;
+    private JLabel operationLabel;
+    @Getter
+    private JLabel operationValue;
+    @Getter
+    private JComboBox operationCreateBox;
 }

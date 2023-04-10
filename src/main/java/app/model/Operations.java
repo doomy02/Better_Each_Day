@@ -1,4 +1,4 @@
-package model.polynomial;
+package app.model;
 
 import java.util.Map;
 import static java.lang.Math.round;
@@ -50,35 +50,7 @@ public class Operations {
         return res;
     }
 
-    public static Polynomial derivative(Polynomial x) {
-        Polynomial res = new Polynomial();
-
-        for(Map.Entry<Integer, Double> entry : x.getPolynomial().descendingMap().entrySet()) {
-            int power = entry.getKey();
-
-            if(power == 1)
-                res.getPolynomial().put(0, entry.getValue());
-            else
-                res.getPolynomial().put(power - 1, entry.getValue() * power);
-        }
-
-        return res;
-    }
-
-    public static Polynomial integrate(Polynomial x) {
-        Polynomial res = new Polynomial();
-
-        for(Map.Entry<Integer, Double> entry : x.getPolynomial().descendingMap().entrySet()) {
-            int power = entry.getKey();
-            double coefficient = round((entry.getValue() / (power + 1)) * 100.0) / 100.0;
-            res.getPolynomial().put(power + 1, coefficient);
-        }
-
-        return res;
-    }
-
-
-    public static Polynomial[] divide(Polynomial x, Polynomial y) {
+    public static Polynomial divide(Polynomial x, Polynomial y) {
         Polynomial res = new Polynomial();
         Polynomial[] result = new Polynomial[2];
         Polynomial aux = new Polynomial();
@@ -108,6 +80,6 @@ public class Operations {
         result[0] = res;
         result[1] = x;
 
-        return result;
+        return res;
     }
 }

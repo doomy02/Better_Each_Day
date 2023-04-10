@@ -62,7 +62,8 @@ public class QuestController {
         questFromDb.setAvailability(quest.getAvailability());
         questFromDb.setTokens(quest.getTokens());
         questFromDb.setOwner(quest.getOwner());
-        questFromDb.setDescription(quest.getDescription());
+        questFromDb.setFirstPolynomial(quest.getFirstPolynomial());
+        questFromDb.setLastPolynomial(quest.getLastPolynomial());
         Quest questUpdated = questService.update(quest);
         return ResponseEntity.status(HttpStatus.OK).body(questUpdated);
     }
