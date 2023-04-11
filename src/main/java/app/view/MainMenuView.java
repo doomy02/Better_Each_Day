@@ -35,4 +35,25 @@ public class MainMenuView {
     @Getter
     private JComboBox badgesBox;
     private JLabel badgesLabel;
+    @Getter
+    private JLabel questNameValue;
+    private JLabel questNameLabel;
+    private JLabel tokenSpentLabel;
+    @Getter
+    private JLabel tokenSpentValue;
+    @Getter
+    private JLabel firstPolyValue;
+    private JLabel secondPolynomialLabel;
+    @Getter
+    private JLabel secondPolynomialValue;
+    private JLabel operationLabel;
+    @Getter
+    private JLabel operationValue;
+    private JLabel answerLabel;
+    @Getter
+    private JLabel answerValue;
+    @Getter
+    private JComboBox questBox;
+    @Getter
+    private JButton selectButton;
 }

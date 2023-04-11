@@ -4,42 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95052255-4360-4d16-bf9c-087fc9b1c5f4" name="Changes" comment="quest system 100% + ranking system 2.0 + data validation">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c307fe66-8050-48f0-8e1c-5c9d4b52cfcc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c307fe66-8050-48f0-8e1c-5c9d4b52cfcc.xml" afterDir="false" />
+    <list default="true" id="95052255-4360-4d16-bf9c-087fc9b1c5f4" name="Changes" comment="finished implementation and GUI">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e84c1674-49ff-4bae-afe7-f96b23e8b38e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e84c1674-49ff-4bae-afe7-f96b23e8b38e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/InnitApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/InnitApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/gui/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/gui/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/gui/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/gui/MainMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/gui/QuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/gui/QuestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/gui/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/gui/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/rest/QuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/rest/QuestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Badge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Badge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Quest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/polynomial/Operations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Operations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/polynomial/Polynomial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Polynomial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/BadgeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/repository/implemetation/BadgeRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/implementation/BadgeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/implementation/BadgeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/single_point_access/GUIFrameSinglePointAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/single_point_access/GUIFrameSinglePointAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/implementation/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/implementation/PersonServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/view/MainMenuView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/view/MainMenuView.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/view/MainMenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/view/MainMenuView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/view/QuestView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/view/QuestView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/view/QuestView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/view/QuestView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/InnitApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/InnitApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/gui/QuestController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/gui/QuestController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/gui/MainMenuController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/gui/MainMenuController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/gui/MainMenuController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/gui/MainMenuController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/gui/MainMenuController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/gui/MainMenuController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/gui/MainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/gui/MainMenuController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/controller/gui/QuestController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/gui/QuestController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/controller/gui/QuestController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/gui/QuestController$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/controller/gui/QuestController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/gui/QuestController$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/controller/gui/QuestController$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/gui/QuestController$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/controller/gui/QuestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/gui/QuestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/controller/rest/QuestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/controller/rest/QuestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/model/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/app/model/Quest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/model/Quest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/view/QuestView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/view/QuestView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/polynomial/Operations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/polynomial/Polynomial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/service/PersonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/service/implementation/PersonServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/service/implementation/PersonServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/view/MainMenuView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/view/MainMenuView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,33 +67,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/sebas/OneDrive/Desktop/mysql-connector-j-8.0.32.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "spring.configuration.checksum": "46f86faa6bbf9ac94a7e459509a20ed0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sebas/OneDrive/Desktop/mysql-connector-j-8.0.32.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;46f86faa6bbf9ac94a7e459509a20ed0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="app.controller.rest" />
@@ -139,7 +128,9 @@
       <workItem from="1681132410072" duration="119000" />
       <workItem from="1681133702505" duration="357000" />
       <workItem from="1681136286714" duration="4350000" />
-      <workItem from="1681141330953" duration="15408000" />
+      <workItem from="1681141330953" duration="15830000" />
+      <workItem from="1681206717109" duration="13124000" />
+      <workItem from="1681235010561" duration="1012000" />
     </task>
     <task id="LOCAL-00001" summary="login and main menu GUI + changes">
       <created>1680944000389</created>
@@ -197,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681105659619</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="finished implementation and GUI">
+      <created>1681162982455</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681162982455</updated>
+    </task>
+    <task id="LOCAL-00010" summary="finished implementation and GUI">
+      <created>1681162996967</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681162996967</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +226,7 @@
     <MESSAGE value="ranking system 1.0 + quest system 80% done" />
     <MESSAGE value="base implementation for Postman" />
     <MESSAGE value="quest system 100% + ranking system 2.0 + data validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="quest system 100% + ranking system 2.0 + data validation" />
+    <MESSAGE value="finished implementation and GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished implementation and GUI" />
   </component>
 </project>

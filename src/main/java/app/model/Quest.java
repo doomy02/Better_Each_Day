@@ -46,6 +46,9 @@ public class Quest implements Serializable {
     private Person owner;
 
     @Column
+    private String result;
+
+    @Column
     private String operation;
 
 }

@@ -2,9 +2,12 @@ package app.service.implementation;
 
 import app.model.Badge;
 import app.model.Person;
+import app.model.Quest;
 import app.repository.BadgeRepository;
 import app.repository.PersonRepository;
+import app.repository.QuestRepository;
 import app.service.PersonService;
+import app.service.QuestService;
 import app.single_point_access.RepositorySinglePointAccess;
 
 import java.util.ArrayList;
@@ -13,7 +16,8 @@ import java.util.List;
 public class PersonServiceImpl implements PersonService {
 
     private final PersonRepository personRepository = RepositorySinglePointAccess.getPersonRepository();
-    private final BadgeRepository badgeRepository= RepositorySinglePointAccess.getBadgeRepository();
+    private final BadgeRepository badgeRepository = RepositorySinglePointAccess.getBadgeRepository();
+    private final QuestRepository questRepository = RepositorySinglePointAccess.getQuestRepository();
 
     @Override
     public Person save(Person person) {
@@ -53,7 +57,21 @@ public class PersonServiceImpl implements PersonService {
         person.getBadges().add(badge);
 
         personRepository.update(person);
+    }
 
+    @Override
+    public void addQuest(Person person, Quest quest) {
+        if (person.getQuests() == null) {
+            person.setQuests(new ArrayList<>());
+        }
+
+        if (quest.getId() == null || questRepository.findById(quest.getId()) == null) {
+            quest = questRepository.save(quest);
+        }
+
+        person.getQuests().add(quest);
+
+        personRepository.update(person);
     }
 
     @Override

@@ -1,10 +1,7 @@
 package app.controller.gui;
 
 import app.model.*;
-import app.service.BadgeService;
-import app.service.JourneyService;
-import app.service.PersonService;
-import app.service.RankingService;
+import app.service.*;
 import app.single_point_access.GUIFrameSinglePointAccess;
 import app.single_point_access.ServiceSinglePointAccess;
 import app.view.MainMenuView;
@@ -17,6 +14,7 @@ public class MainMenuController {
     private MainMenuView mainMenuView;
     private final PersonService personService = ServiceSinglePointAccess.getPersonService();
     private final BadgeService badgeService = ServiceSinglePointAccess.getBadgeService();
+    private final QuestService questService = ServiceSinglePointAccess.getQuestService();
 
     public void startLogic(Person person, Ranking ranking){
         mainMenuView = new MainMenuView();
@@ -88,6 +86,10 @@ public class MainMenuController {
             mainMenuView.getBadgesBox().addItem(person.getBadges().get(i).getName());
         }
 
+        for(int i = 0; i < person.getQuests().size(); i++){
+            mainMenuView.getQuestBox().addItem(person.getQuests().get(i).getName());
+        }
+
         mainMenuView.getSignOutButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -120,6 +122,21 @@ public class MainMenuController {
 
                 QuestController questController = new QuestController();
                 questController. startLogic(person, journey, ranking);
+            }
+        });
+
+        mainMenuView.getSelectButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String quest = mainMenuView.getQuestBox().getSelectedItem().toString();
+                Quest savedQuest = questService.findByName(quest);
+
+                mainMenuView.getQuestNameValue().setText(quest);
+                mainMenuView.getTokenSpentValue().setText(String.valueOf(savedQuest.getTokens()));
+                mainMenuView.getFirstPolyValue().setText(savedQuest.getFirstPolynomial());
+                mainMenuView.getSecondPolynomialValue().setText(savedQuest.getLastPolynomial());
+                mainMenuView.getOperationValue().setText(savedQuest.getOperation());
+                mainMenuView.getAnswerValue().setText(savedQuest.getResult());
             }
         });
     }

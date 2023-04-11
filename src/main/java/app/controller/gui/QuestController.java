@@ -92,7 +92,6 @@ public class QuestController {
                 }
 
                 person.setTokens(person.getTokens() - tokens);
-                Person user = personService.update(person);
 
                 Quest q = new Quest();
                 q.setTokens(tokens);
@@ -107,6 +106,9 @@ public class QuestController {
                 journeyService.addQuestJourney(journey, q);
                 Journey savedJourney = journeyService.update(journey);
                 questView.getComboBox1().addItem(q.getName());
+
+                personService.addQuest(person, q);
+                Person user = personService.update(person);
 
                 GUIFrameSinglePointAccess.showDialogMessage("Success!");
                 questView.getNameField().setText("");
@@ -184,6 +186,7 @@ public class QuestController {
                     rankingService.update(ranking);
 
                     GUIFrameSinglePointAccess.showDialogMessage("Quest accomplished! Refresh to update the leader score!");
+                    savedQuest.setResult(res.printPolynomial());
                     savedQuest.setAvailability(false);
                     savedQuest = questService1.update(savedQuest);
                 }

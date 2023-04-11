@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="500" height="420"/>
     </constraints>
     <properties>
       <background color="-14277823"/>
@@ -241,6 +241,176 @@
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
               </hspacer>
+            </children>
+          </grid>
+          <grid id="4576f" layout-manager="GridLayoutManager" row-count="7" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Your quests"/>
+            </constraints>
+            <properties>
+              <background color="-16561023"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="e32de" class="javax.swing.JLabel" binding="questNameLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <foreground color="-1"/>
+                  <name value="nameLabel"/>
+                  <text value="Name:"/>
+                </properties>
+              </component>
+              <component id="39539" class="javax.swing.JLabel" binding="questNameValue">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <foreground color="-1"/>
+                  <name value="nameValue"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="7497" class="javax.swing.JLabel" binding="tokenSpentLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <foreground color="-1"/>
+                  <name value="nameLabel"/>
+                  <text value="Tokens spent:"/>
+                </properties>
+              </component>
+              <component id="8d7a9" class="javax.swing.JLabel" binding="tokenSpentValue">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <foreground color="-1"/>
+                  <name value="nameValue"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="89cad" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <foreground color="-1"/>
+                  <name value="nameLabel"/>
+                  <text value="1st Polynomial:"/>
+                </properties>
+              </component>
+              <component id="fa21d" class="javax.swing.JLabel" binding="firstPolyValue">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <foreground color="-1"/>
+                  <name value="nameValue"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="11590" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <foreground color="-1"/>
+                  <name value="nameLabel"/>
+                  <text value="1st Polynomial:"/>
+                </properties>
+              </component>
+              <component id="9dbb1" class="javax.swing.JLabel" binding="secondPolynomialLabel">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <foreground color="-1"/>
+                  <name value="nameLabel"/>
+                  <text value="2nd Polynomial:"/>
+                </properties>
+              </component>
+              <component id="57bf3" class="javax.swing.JLabel" binding="secondPolynomialValue">
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <foreground color="-1"/>
+                  <name value="nameValue"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="897f8" class="javax.swing.JLabel" binding="operationLabel">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <foreground color="-1"/>
+                  <name value="nameLabel"/>
+                  <text value="Operation:"/>
+                </properties>
+              </component>
+              <component id="720b6" class="javax.swing.JLabel" binding="operationValue">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <foreground color="-1"/>
+                  <name value="nameValue"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="5582e" class="javax.swing.JLabel" binding="answerLabel">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <foreground color="-1"/>
+                  <name value="nameLabel"/>
+                  <text value="Answer:"/>
+                </properties>
+              </component>
+              <component id="ce230" class="javax.swing.JLabel" binding="answerValue">
+                <constraints>
+                  <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <foreground color="-1"/>
+                  <name value="nameValue"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="a98cc" class="javax.swing.JComboBox" binding="questBox">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="65bc1" class="javax.swing.JButton" binding="selectButton">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Georgia" size="14"/>
+                  <text value="Select"/>
+                </properties>
+              </component>
             </children>
           </grid>
         </children>
